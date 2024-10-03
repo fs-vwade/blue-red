@@ -1,20 +1,8 @@
-import { Route, Routes } from "react-router-dom";
-import { useState } from "react";
-import Red from "./features/pages/Red";
-import Blue from "./features/pages/Blue";
-import Home from "./features/pages/Home";
+import { RouterProvider } from "react-router-dom";
+//import { useState } from "react";
 
-function App() {
-	const [count, setCount] = useState(0);
+import router from "./router";
 
-	return (
-		<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/red" element={<Red />} />
-			<Route path="/blue" element={<Blue />} />
-			{/*<Route />*/}
-		</Routes>
-	);
+export default function App() {
+	return <RouterProvider router={router} />;
 }
-
-export default App;
